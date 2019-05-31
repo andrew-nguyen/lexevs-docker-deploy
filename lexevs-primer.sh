@@ -16,13 +16,17 @@ LEXEVS_BUILD_ONLY=YES
 #*****************************************************************
 # Remove artifact directories and recreate them fresh.
 #*****************************************************************
-rm -rf $ROOT_DIR/build
+#rm -rf $ROOT_DIR/build
 
 #*****************************************************************
 # Create artifact directories and recreate them fresh.
 #*****************************************************************
-mkdir $ROOT_DIR/build
-mkdir $ROOT_DIR/build/lexevs
+#mkdir $ROOT_DIR/build
+#mkdir $ROOT_DIR/build/lexevs
+
+# Removal and creation of the build/lexevs directory is don in the
+# Artifact build image.  It is run as root and has permission to
+# remove/add directories.
 
 #*****************************************************************
 # Setup/Build LexEVS
